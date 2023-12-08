@@ -1,6 +1,6 @@
 spring:
   application:
-    name: config-server
+    name: config-server    # important for Service Discovery!
     
 server:
   port: 8071
