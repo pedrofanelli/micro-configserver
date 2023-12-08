@@ -1,6 +1,16 @@
 spring:
   application:
     name: config-server    # important for Service Discovery!
+  profiles:
+    active: native  
+  cloud:
+    config:
+      server:
+        #Local configuration: This locations can either of classpath or locations in the filesystem.
+        native:
+          search-locations: classpath:/config
+          # The classpath attribute causes Spring Cloud Config Server to look in the src/main/resources/config folder.
+  
     
 server:
   port: 8071
