@@ -2,19 +2,21 @@ spring:
   application:
     name: config-server    # important for Service Discovery!
   profiles:
-    active: native  
+    active: git  
   cloud:
     config:
       server:
         #Local configuration: This locations can either of classpath or locations in the filesystem.
-        native:
-          search-locations: classpath:/config
+        #native:
+          #search-locations: classpath:/config
           # The classpath attribute causes Spring Cloud Config Server to look in the src/main/resources/config folder.
-
+        git:
+          uri: https://github.com/pedrofanelli/micro-configserver.git
+          searchPaths: src/main/resources/config
 
 # POST localhost:8071/encrypt /decrypt y obtenemos datos encriptados que podemos usar en los config
-#encrypt:
-  #key: fje83Ki8403Iod87dne7Yjsl3THueh48jfuO9j4U2hf64Lo  
+encrypt:
+  key: fje83Ki8403Iod87dne7Yjsl3THueh48jfuO9j4U2hf64Lo  
 
 # In a real run-time environment, we would reference the ENCRYPT_KEY as an OS environment variable 
 # inside a Dockerfile.
