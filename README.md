@@ -46,7 +46,7 @@ Luego, para actualizar el servicio de configuracion y que tome nuevos archivos d
 
 Para generar encriptados/desencriptar (le pegamos al servicio de configuracion):
 
-`localhost:8081/encrypt`
+`localhost:8071/encrypt`
 
 # CONCLUSION
 
