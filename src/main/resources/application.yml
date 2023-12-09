@@ -20,6 +20,7 @@ spring:
 
 # In a real run-time environment, we would reference the ENCRYPT_KEY as an OS environment variable 
 # inside a Dockerfile.
+# eso es lo que hacemos, tomamos variables del .env en la misma ubicacion que docker-compose
 
 server:
   port: 8071
