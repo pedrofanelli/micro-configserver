@@ -30,7 +30,7 @@ spring:
             lower-case-service-id: true
         routes:
         - id: organization-service
-          uri: lb://organization-servicee
+          uri: lb://organization-service
           predicates:
           - Path=/organization/**
           filters:
