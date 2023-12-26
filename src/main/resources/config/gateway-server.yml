@@ -42,6 +42,11 @@ spring:
           filters:
           - RewritePath=/license/(?<path>.*), /$\{path}
 
+logging:
+  level:
+    com.netflix: WARN
+    org.springframework.web: WARN
+    com.example: DEBUG
 
 #spring.cloud.gateway.discovery.locator.enabled=true
 #spring.cloud.gateway.discovery.locator.lower-case-service-id=true
